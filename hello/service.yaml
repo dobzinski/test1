@@ -6,7 +6,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: hello
+    app: app1
   ports:
     - name: web
       port: 80
