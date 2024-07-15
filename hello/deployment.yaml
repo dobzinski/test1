@@ -22,12 +22,10 @@ spec:
             name: web
             protocol: TCP
           env:
-            - name: CONTAINER_COLOR
-              value: teal
-            - name: TITLE
-              value: Hello Rancher              
-            - name: PETS
-              value: whitecows   
+            - name: User
+              value: admin
+            - name: Environment
+              value: Dev             
           readinessProbe:
             httpGet:
               port: web
