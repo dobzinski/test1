@@ -14,6 +14,13 @@ spec:
         app: app1
     spec:
       containers:
+        - resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "100m"
+            memory: "128Mi"
         - name: app1
           image: nginx:1.8.1
           imagePullPolicy: Always
@@ -32,10 +39,3 @@ spec:
             httpGet:
               port: web
               path: /
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128Mi"
-          limits:
-            cpu: "100m"
-            memory: "128Mi"
